@@ -1,4 +1,4 @@
-import { Box, Heading, Image } from '@chakra-ui/react'
+import { Box, Heading, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 
 export default function HouseCard({title, type, cost, rooms, shower, size, pic} : any) {
@@ -9,7 +9,7 @@ export default function HouseCard({title, type, cost, rooms, shower, size, pic} 
             <Image src={pic} alt='house' className='w-full min-h-full hover:scale-125 transform transition-all'/>
         </Box>
         <Box className='pt-[10px] h-full flex border flex-col'>
-            <Heading as={'h5'} fontSize={'md'} className='px-5 lg:px-9 font-bold text-xl md:text-[23px] text-black  mb-3'>{title}</Heading>
+            <Text className='px-5 lg:px-9 font-bold text-xl md:text-[23px] text-black  mb-3'>{title}</Text>
             <article className='px-4 lg:px-9 mb-2 md:mb-[18px] mt-auto'>
                 <span className='text-[#818181] -tracking-[0.642075px] text-sm md:text-lg '>{type}</span>
                 <p className='text-[orange] text-lg md:text-[1.5rem] md:leading-8 font-bold -tracking-[0.642075px]'>${cost}/Month</p>

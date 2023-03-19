@@ -12,6 +12,10 @@
     @apply bg-[#f9f9f9] h-[50px] border border-[#E6E6E6] rounded-[5px] tracking-[0.2px] text-[#737373] text-sm leading-9 px-5 w-full focus:outline-0
   }
 
+  .image-overlay{
+    @apply h-full w-full absolute top-0 left-0 bg-black/[0.2] z-10 text-lg md:text-[1.2rem] font-semibold text-center text-white py-4 lg:py-[30px] px-1.5 
+  }
+
   li {
     @apply p-4;
     list-style: none;

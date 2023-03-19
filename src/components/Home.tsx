@@ -2,10 +2,15 @@ import { Box, Button, Heading, Image, Select, Text } from '@chakra-ui/react'
 import React from 'react'
 import Header from './Header/Header'
 import RentalMap from '/src/assets/images/rentalsmap.png'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
+import imgflex from '/src/assets/images/imgflexible.png'
+import imgjoy from '/src/assets/images/rentalsjoy.png'
+import friends from '/src/assets/images/homefrnds.png'
+import imgcleanse from '/src/assets/images/imgcleanse.png'
 import Section from './Section'
 import Housing from './Housing/Housing'
 import Form from './Input/Form'
+import Footer from './Footer/Footer'
+import Vids from './Testimony/Vids'
 
 
 export default function Home() {
@@ -46,14 +51,57 @@ export default function Home() {
             </Box>
         </Box>
     </Box>
-    <Box>
         <Section/>
         <Housing/>
-        <Box>
-            <Heading as={'h2'} fontSize={'md'} className='capitalize text-center'>Your property with us and be confident that your room will be filled out!</Heading>
-            <Form/>
+        <Box className='py-6 md:py-[93px]'>
+            <Box className='container mx-auto px-12'>
+                <Box className='flex flex-col-reverse md:flex-row items-center  gap-5 mb-[110px]'>
+                    <Box className=' md:w-1/2 shrink-0'>
+                        <Box className='flex items-end mb-5 gap-5'>
+                            <Box className='rounded-[1.25rem] overflow-hidden w-fit relative capitalize'>
+                                <Box className='image-overlay'>
+                                    Flexible Lease
+                                </Box>
+                                <Image src={imgflex} alt=''/>
+                            </Box>
+                            <Box className='rounded-[1.25rem] overflow-hidden w-fit h-fit mr-5 relative capitalize'>
+                                <Box className='image-overlay'>
+                                    7-Day Happiness guarantee
+                                </Box>
+                                <Image src={imgjoy} alt=''/>
+                            </Box>
+                        </Box>
+                        <Box className='flex items-start' gap={'5'}>
+                            <Box className='rounded-[1.25rem] overflow-hidden w-fit relative capitalize'>
+                                <Box className='image-overlay'>
+                                    Monthly house cleaning
+                                </Box>
+                                <Image src={imgcleanse} alt=''/>
+                            </Box>
+                            <Box className='rounded-[1.25rem] overflow-hidden w-fit relative capitalize'>
+                                <Box className='image-overlay'>
+                                    Monthly house cleaning
+                                </Box>
+                                <Image src={friends} alt=''/>
+                            </Box>
+                        </Box>
+                </Box>
+                <Box>
+                <article>
+                            <Heading data-aos="slide-up" className='text-2xl md:text-3xl lg:text-[2.5rem] leading-[140%] font-[800] mb-4'>Flexibility and options to suit your lifestyle.</Heading>
+                            <Text fontSize={'sm'} data-aos="fade-up" className='text-lg leading-8 mb-10'>You need it? We got it. We make finding your next home easy, comfortable, and simple. From our happiness guarantee to our selective roommate finder option. We provide you the flexibility that you most desire.</Text>
+                            <Button backgroundColor={'orange'} data-aos="zoom-in" className="rounded-[13px] text-white px-9 py-4 md:py-[22px] text-lg ">Search Rooms</Button>
+                        </article>
+                </Box>
+                </Box>
+            </Box>
         </Box>
-    </Box>
+       
+            
+            <Form/>
+        <Vids/>
+        <Footer/>
+    
     </>
   )
 }
